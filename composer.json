@@ -1,0 +1,35 @@
+{
+    "name": "groupesti/laravel-ca-crl",
+    "description": "CRL management package for Laravel CA",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "groupesti/laravel-ca": "^0.1",
+        "groupesti/laravel-ca-crt": "^0.1",
+        "groupesti/laravel-ca-log": "^0.1",
+        "phpseclib/phpseclib": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CA\\Crl\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CA\\Crl\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CA\\Crl\\CrlServiceProvider"
+            ],
+            "aliases": {
+                "CaCrl": "CA\\Crl\\Facades\\CaCrl"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
